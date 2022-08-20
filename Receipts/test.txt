@@ -1,0 +1,12 @@
+========= RECEIPT NO 46692 ========= 
+ Client contact			703546375 
+Apartment Type			4 Bedroom 
+House Number			401  
+Rent				250000  
+Date Entered			2021-10-07 
+ Amount Paid			250000 
+ Pay Option			Bank 
+ Code				sdcdsaf 
+Balance				0  
+Next Pay Date			2021-11-06 00:00:00 
+ ================================================

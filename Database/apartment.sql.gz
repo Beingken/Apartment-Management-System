@@ -1,0 +1,221 @@
+-- phpMyAdmin SQL Dump
+-- version 5.1.3
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Jun 16, 2022 at 01:36 PM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 8.1.5
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `apartment`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `client details`
+--
+
+CREATE TABLE `client details` (
+  `Client ref` varchar(100) NOT NULL,
+  `First Name` varchar(100) NOT NULL,
+  `Last Name` varchar(100) NOT NULL,
+  `Gender` varchar(100) NOT NULL,
+  `Marital Status` varchar(100) NOT NULL,
+  `ID Type` varchar(100) NOT NULL,
+  `ID Number` int(100) NOT NULL,
+  `Nationality` varchar(100) NOT NULL,
+  `Occupation` varchar(100) NOT NULL,
+  `Phone Number` int(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `client details`
+--
+
+INSERT INTO `client details` (`Client ref`, `First Name`, `Last Name`, `Gender`, `Marital Status`, `ID Type`, `ID Number`, `Nationality`, `Occupation`, `Phone Number`) VALUES
+('18491', 'eric', 'kadogo', 'Male', 'Married', 'Passport', 344789743, 'SFGHJGYHUJKL', 'OIUUJYHTGFDVF', 377843),
+('19688', 'alaaaaaaa', 'rrtrtr', 'Male', 'Single', 'National ID', 0, 'rrt', 'ee', 6887),
+('21608', 'next', 'me', 'Female', 'Married', 'National ID', 477, 'wsdfghjgfds', 'dsfghjmgfdsa', 2147483647),
+('25096', 'qwdes', 'edfrtg', 'Male', 'Single', 'National ID', 0, 'drftgrfhndgj', 'retgryhfn', 0),
+('26873', 'adrfguhk', 'wetrfyhgujk', 'Male', 'Single', 'Passport', 2347478, 'aerstdghfyjkhn,', 'sedrfjhk,nml', 2147483647),
+('40265', 'qqqqqqqqqq', 'q', 'Female', 'Married', 'National ID', 0, 'q', 'q', 0),
+('40754', 'ken', 'ssaxs', 'Male', 'Married', 'National ID', 22222222, 'xsacs', 'dasdsa', 44444444),
+('44698', 'fwasdf', 'sdfv', 'Male', 'Single', 'National ID', 2147483647, 'fesdgrthyjuyerfgtfh', 'serfgdhjmk', 2147483647),
+('46559', 'wdsfb', 'asdfvg', 'Male', 'Married', 'Passport', 0, 'sddcfv', 'ds', 0),
+('50245', 'Kennedy', 'Mwesh', 'Male', 'Single', 'National ID', 2147483647, 'Kenyan', 'ICT', 2147483647),
+('58443', 'wfed', 'dfedghgn', 'Male', 'Single', 'National ID', 234747743, 'wedfrgyhujyki', 'wedrfgyujhk', 2147483647),
+('62744', 'asdrfgt', 'sdrfg', 'Select', 'Select', 'Select', 0, 'sdfg', 'sadfg', 0),
+('63725', 'vinnie', 'wahjackoyah', 'Male', 'Single', 'National ID', 34564645, 'kenyan', 'ict', 752689854),
+('67578', 'wqetrgretrfdew', 'asdfaer', 'Male', 'Single', 'Passport', 2132423434, 'fgfhjkljhgfdsxxd', 'ertgyujiytrefsd', 121),
+('72402', 'wdefrghn', 'sdfbgjhm,k', 'Male', 'Married', 'National ID', 0, 'wetgryhjt', 'wsdfgjhmk,ml', 0),
+('80798', 'wdwesdf', 'detfgg', 'Male', 'Single', 'National ID', 0, 'eftghrygefwe', 'wdewgwrger', 0),
+('83259', 'edfrr', 'fedrgthn', 'Male', 'Single', 'National ID', 0, 'gthynjmhk,', 'tgfyhnjmhk,', 0),
+('85485', 'qerfwtgr', 'wqetg', 'Male', 'Single', 'National ID', 0, 'weretgyhr', 'ewrethyrn', 0),
+('85647', 'kennnnnn', 'kennnnnn', 'Male', 'Single', 'National ID', 2147483647, 'kenyan', 'IT', 1234747899),
+('89242', 'willy', 'w', 'Male', 'Single', 'National ID', 0, 'w', 'w', 0),
+('96259', 'afedrgthgujtk', 'waretyujkhi', 'Select', 'Select', 'Select', 324747899, 'wafesdrgujhk', 'wsefdrghj', 2147483647);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `details`
+--
+
+CREATE TABLE `details` (
+  `Apartment Type` varchar(100) NOT NULL,
+  `House Number` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `details`
+--
+
+INSERT INTO `details` (`Apartment Type`, `House Number`) VALUES
+('1 Bedroom', '101'),
+('fvdbgnhmkj,jhgfdsaa', '111'),
+('fvdbgnhmkj,jhgfdsaa', '2222'),
+('3 Bedroom', '301'),
+('3 Bedroom', '302'),
+('3 Bedroom', '303'),
+('4 Bedroom', '401'),
+('4 Bedroom', '402'),
+('4 Bedroom', '403');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `expense`
+--
+
+CREATE TABLE `expense` (
+  `Expense ref` int(100) NOT NULL,
+  `Expense Type` varchar(100) NOT NULL,
+  `Specify Type` varchar(100) NOT NULL,
+  `Debtor's Name` varchar(100) NOT NULL,
+  `Expense Amt` int(100) NOT NULL,
+  `Amt Paid` int(100) NOT NULL,
+  `Pay Option` varchar(100) NOT NULL,
+  `Code` varchar(100) NOT NULL,
+  `Balance` int(100) NOT NULL,
+  `Pay Date` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `expense`
+--
+
+INSERT INTO `expense` (`Expense ref`, `Expense Type`, `Specify Type`, `Debtor's Name`, `Expense Amt`, `Amt Paid`, `Pay Option`, `Code`, `Balance`, `Pay Date`) VALUES
+(66083, 'Other', 'internet', 'vinnie', 50000, 20000, 'Bank', 'vggfbvn', 30000, '2022-06-16');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `house`
+--
+
+CREATE TABLE `house` (
+  `Client Contact` int(100) NOT NULL,
+  `Apartment Type` varchar(100) NOT NULL,
+  `House Number` int(100) NOT NULL,
+  `Deposit` int(100) NOT NULL,
+  `Rent` int(100) NOT NULL,
+  `Water` int(100) NOT NULL,
+  `Electricity` int(100) NOT NULL,
+  `Security` int(100) NOT NULL,
+  `Garbage` int(100) NOT NULL,
+  `Date Entered` varchar(100) NOT NULL,
+  `Pay Opt` varchar(100) NOT NULL,
+  `Code` varchar(100) NOT NULL,
+  `Amt Paid` int(100) NOT NULL,
+  `Balance` int(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `house`
+--
+
+INSERT INTO `house` (`Client Contact`, `Apartment Type`, `House Number`, `Deposit`, `Rent`, `Water`, `Electricity`, `Security`, `Garbage`, `Date Entered`, `Pay Opt`, `Code`, `Amt Paid`, `Balance`) VALUES
+(44444444, '4 Bedroom', 111, 324, 13312, 2331, 4323, 77443, 843434, '1/1/2010', 'Bank', 'asa3w3wds', 20999, 0),
+(2147483647, '4 Bedroom', 2222, 324, 13312, 2331, 4323, 77443, 843434, '77guigjkm', 'Mpesa', 'jhgv7r7yufyhcv', 74778, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `login`
+--
+
+CREATE TABLE `login` (
+  `Username` varchar(100) NOT NULL,
+  `Password` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `login`
+--
+
+INSERT INTO `login` (`Username`, `Password`) VALUES
+('admin', 'admin');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `spouse`
+--
+
+CREATE TABLE `spouse` (
+  `Spouse ref` int(100) NOT NULL,
+  `First Name` varchar(100) NOT NULL,
+  `Last Name` varchar(100) NOT NULL,
+  `Nationality` varchar(100) NOT NULL,
+  `ID Type` varchar(100) NOT NULL,
+  `ID Number` int(100) NOT NULL,
+  `Occupation` varchar(100) NOT NULL,
+  `Phone Number` int(100) NOT NULL,
+  `Gender` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `spouse`
+--
+
+INSERT INTO `spouse` (`Spouse ref`, `First Name`, `Last Name`, `Nationality`, `ID Type`, `ID Number`, `Occupation`, `Phone Number`, `Gender`) VALUES
+(25154, 'sawdsefdrgtfh', 'qwedfgh', 'drfgth', 'Select', 0, 'qdrfgth', 0, 'Select');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `client details`
+--
+ALTER TABLE `client details`
+  ADD PRIMARY KEY (`Client ref`);
+
+--
+-- Indexes for table `details`
+--
+ALTER TABLE `details`
+  ADD PRIMARY KEY (`House Number`);
+
+--
+-- Indexes for table `house`
+--
+ALTER TABLE `house`
+  ADD PRIMARY KEY (`House Number`,`Apartment Type`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
